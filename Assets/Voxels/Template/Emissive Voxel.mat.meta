@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 9ec29319dfd188d44a31be8ad8760225
+labels:
+- Material
+- Template
+- Voxels
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Template/Emissive Voxel.mat
+  uploadId: 457640

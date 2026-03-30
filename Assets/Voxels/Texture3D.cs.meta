@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: f2fe63a1884582840904c787eb2791f2
+labels:
+- 3D
+- Conversion
+- Exporter
+- Texture
+- Voxel
+- Voxels
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Texture3D.cs
+  uploadId: 457640

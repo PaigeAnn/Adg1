@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e0bcb8adc990135408d49bef43ff9969
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Editor/ParticleSystemCreator Editor.cs
+  uploadId: 457640

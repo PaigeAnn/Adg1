@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: da14c2c33ba71a74782bb481bc1355c6
+labels:
+- HDRP
+- Material
+- Template
+- Voxels
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Template/HDRP Emissive Opaque Voxel.mat
+  uploadId: 457640

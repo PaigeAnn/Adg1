@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 5028c53c68f22ef48be61c3c06f771f1
+labels:
+- Script
+- Template
+- Voxels
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Template/VoxelsProcessingHelper.cs
+  uploadId: 457640

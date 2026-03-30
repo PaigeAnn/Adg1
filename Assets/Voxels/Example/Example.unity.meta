@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 1b7463d82c7453f4488d1f5fe19c28d9
+labels:
+- GFX
+- Effect
+- Blocks
+- 3D
+- ParticleSystem
+- Particle
+- Mesh
+- Conversion
+- Lightrock
+- Lightrocker
+- Voxels
+- Voxel
+timeCreated: 1441119295
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Example/Example.unity
+  uploadId: 457640

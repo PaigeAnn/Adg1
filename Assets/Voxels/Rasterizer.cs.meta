@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 28edd4d8b365bd84e8357ce88b7ec1b5
+labels:
+- 3D
+- Blocks
+- Conversion
+- Voxel
+- Voxels
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Rasterizer.cs
+  uploadId: 457640

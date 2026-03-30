@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 5828baae72e655c448c516715ae0d393
+labels:
+- GFX
+- Effect
+- Blocks
+- 3D
+- ParticleSystem
+- Particle
+- Mesh
+- Conversion
+- Lightrock
+- Lightrocker
+- Voxels
+- Voxel
+timeCreated: 1441121532
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Example/Test Material emissive.mat
+  uploadId: 457640

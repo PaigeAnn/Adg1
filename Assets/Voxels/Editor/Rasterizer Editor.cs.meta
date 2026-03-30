@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 8403ab6fd914b6c458cae694f560e0b6
+timeCreated: 1455640311
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Editor/Rasterizer Editor.cs
+  uploadId: 457640

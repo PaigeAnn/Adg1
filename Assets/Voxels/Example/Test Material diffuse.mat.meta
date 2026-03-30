@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 4fc336d8d0de5bb488ce165ec42ed8fb
+labels:
+- GFX
+- Effect
+- Blocks
+- 3D
+- ParticleSystem
+- Particle
+- Mesh
+- Conversion
+- Lightrock
+- Lightrocker
+- Voxels
+- Voxel
+timeCreated: 1441121532
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Example/Test Material diffuse.mat
+  uploadId: 457640

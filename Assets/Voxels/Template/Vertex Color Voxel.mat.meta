@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a2f9e8d1aa7d833458c4f22c40390b3d
+labels:
+- Material
+- Template
+- Voxels
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Template/Vertex Color Voxel.mat
+  uploadId: 457640

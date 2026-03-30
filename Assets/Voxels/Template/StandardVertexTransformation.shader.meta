@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 2755b472ca76c314dabee040f260e855
+labels:
+- Shader
+- Template
+- Voxels
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 45447
+  packageName: 'Voxels: Rasterizer'
+  packageVersion: 1.23.0
+  assetPath: Assets/Voxels/Template/StandardVertexTransformation.shader
+  uploadId: 457640
