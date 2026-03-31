@@ -1,10 +1,12 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using Unity.VisualScripting;
+using System.Collections;
 
 public class GameScript : MonoBehaviour
 {
     public int isChosen;
     public int EnemyChosen;
+
 
     public void Karen()
     {
@@ -88,6 +90,11 @@ public class GameScript : MonoBehaviour
         {
             Debug.Log("Draw");
         }
+    }
+
+    public void lose()
+    {
+        
     }
 
 }
