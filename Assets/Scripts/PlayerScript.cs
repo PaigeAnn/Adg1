@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     public Transform[] waypoints;
 
     public GameObject gamePanel;
+    public GameObject winPanel;
 
     public bool canMove = true;
 
@@ -24,7 +25,6 @@ public class PlayerScript : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         gamePanel.SetActive(false);
-        MoveForward();
     }
 
     // Update is called once per frame
@@ -59,17 +59,6 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    public void MoveForward()
-    {
-        for (int i = 0; i < waypoints.Length; i++)
-        {
-            if(this.transform.position == waypoints[i].position)
-            {
-               transform.position = Vector2.MoveTowards(transform.position, waypoints[i + 1].position, speed * Time.deltaTime);
-            }
-
-        }
-    }
 
     void MoveToWaypoint()
     {
@@ -80,7 +69,7 @@ public class PlayerScript : MonoBehaviour
         Vector3 direction = target.position - transform.position;
         direction.y = 0;
 
-        //Move toward waypoint
+        // Move toward waypoint
         if (direction.magnitude > 0.2f)
         {
             direction = direction.normalized;
@@ -88,27 +77,29 @@ public class PlayerScript : MonoBehaviour
         }
         else
         {
-            //Snap to waypoint
+            // Snap exactly to waypoint
             transform.position = target.position;
 
-            //Move to next waypoint
+            // If NOT last waypoint ? go to next
             if (currentWaypointIndex < waypoints.Length - 1)
             {
                 currentWaypointIndex++;
 
-                //Rotate toward next waypoint
+                // Rotate toward next waypoint
                 Vector3 lookDir = waypoints[currentWaypointIndex].position - transform.position;
                 lookDir.y = 0;
 
                 if (lookDir != Vector3.zero)
                 {
-                    transform.rotation = Quaternion.LookRotation(lookDir);
+                    transform.rotation = Quaternion.LookRotation(lookDir) * Quaternion.Euler(0, 90, 0);
                 }
             }
-
-            //Stop and trigger game
-            canMove = false;
-            gamePanel.SetActive(true);
+            else
+            {
+                // ONLY stop at final waypoint
+                canMove = false;
+                gamePanel.SetActive(true);
+            }
         }
     }
 
@@ -122,6 +113,11 @@ public class PlayerScript : MonoBehaviour
             gamePanel.SetActive(true);
             //destroy customer
             other.gameObject.SetActive(false);
+        }
+        if(other.gameObject.CompareTag("End"))
+        {
+            winPanel.SetActive(true);
+            gamePanel.SetActive(false);
         }
     }
 

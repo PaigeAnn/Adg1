@@ -23,14 +23,16 @@ public class GameScript : MonoBehaviour
     public GameObject lose;
     public GameObject win;
 
+    public GameObject losePanel;
+
     public int loseCount;
 
     public PlayerScript playerScript;
 
     public void Start()
     {
-       // playerScript = GetComponent<PlayerScript>();
-
+        // playerScript = GetComponent<PlayerScript>();
+       
         isChosen = 0;
         EnemyChosen = 0;
 
@@ -47,6 +49,8 @@ public class GameScript : MonoBehaviour
         PlayerOption3.SetActive(false);
 
         draw.SetActive(false);
+
+       
     }
     public void Karen()
     {
@@ -190,26 +194,27 @@ public class GameScript : MonoBehaviour
     IEnumerator LoseCondition()
     {
         lose.SetActive(true);
+        loseCount++;
         yield return new WaitForSeconds(1);
         if (loseCount == 3)
         {
             Debug.Log("Game Over");
+            losePanel.SetActive(true);
         }
-        else
-        {
-            playerScript.gamePanel.SetActive(false);
-            playerScript.canMove = true;
-        }
-        Reset();
+        yield return StartCoroutine(Reset());
+        playerScript.gamePanel.SetActive(false);
+        playerScript.canMove = true;
+        
+       
     }
 
     IEnumerator WinCondition()
     {
-        yield return new WaitForSeconds(1);
         win.SetActive(true);
+        yield return new WaitForSeconds(1);
+        yield return StartCoroutine(Reset());
         playerScript.gamePanel.SetActive(false);
         playerScript.canMove = true;
-        Reset();
     }
 
     IEnumerator Reset()
@@ -228,5 +233,7 @@ public class GameScript : MonoBehaviour
         PlayerOption1.SetActive(false);
         PlayerOption2.SetActive(false);
         PlayerOption3.SetActive(false);
+        win.SetActive(false);
+        lose.SetActive(false);
     }
 }
