@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.InputSystem;
+using System.Runtime.CompilerServices;
 public class PlayerScript : MonoBehaviour
 {
     public float speed = 6f;
@@ -11,10 +12,13 @@ public class PlayerScript : MonoBehaviour
     float velocity;
 
     public Transform[] waypoints;
+
+    public GameObject gamePanel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        gamePanel.SetActive(false);
         MoveForward();
     }
 
@@ -51,6 +55,16 @@ public class PlayerScript : MonoBehaviour
                transform.position = Vector2.MoveTowards(transform.position, waypoints[i + 1].position, speed * Time.deltaTime);
             }
 
+        }
+    }
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Customer"))
+        {
+            gamePanel.SetActive(true);
         }
     }
 
