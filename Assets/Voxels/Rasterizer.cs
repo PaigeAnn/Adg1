@@ -284,7 +284,7 @@ namespace Voxels
             static UpdateRenderPipelineDefineSymbols()
             {
                 // Determine, if costum pipeline is active
-                var renderPipelineType = UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset ? UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset.GetType() : null;
+                var renderPipelineType = UnityEngine.Rendering.GraphicsSettings.defaultRenderPipeline ? UnityEngine.Rendering.GraphicsSettings.defaultRenderPipeline.GetType() : null;
                 var pipelineActive = renderPipelineType != null && renderPipelineType.Name != null;
                 
                 // Change pre-processor definition depending on current render pipeline
