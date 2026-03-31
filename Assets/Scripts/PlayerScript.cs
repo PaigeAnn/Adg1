@@ -16,6 +16,9 @@ public class PlayerScript : MonoBehaviour
     public GameObject gamePanel;
 
     public bool canMove = true;
+
+    public int currentWaypointIndex = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,7 +42,12 @@ public class PlayerScript : MonoBehaviour
 
         movement = transform.TransformDirection(movement);
         controller.Move(movement);
-        
+
+        if (canMove)
+        {
+            MoveToWaypoint();
+        }
+
     }
 
     public void MoveInput(InputAction.CallbackContext ctx)
@@ -60,6 +68,47 @@ public class PlayerScript : MonoBehaviour
                transform.position = Vector2.MoveTowards(transform.position, waypoints[i + 1].position, speed * Time.deltaTime);
             }
 
+        }
+    }
+
+    void MoveToWaypoint()
+    {
+        if (waypoints.Length == 0) return;
+
+        Transform target = waypoints[currentWaypointIndex];
+
+        Vector3 direction = target.position - transform.position;
+        direction.y = 0;
+
+        //Move toward waypoint
+        if (direction.magnitude > 0.2f)
+        {
+            direction = direction.normalized;
+            controller.Move(direction * speed * Time.deltaTime);
+        }
+        else
+        {
+            //Snap to waypoint
+            transform.position = target.position;
+
+            //Move to next waypoint
+            if (currentWaypointIndex < waypoints.Length - 1)
+            {
+                currentWaypointIndex++;
+
+                //Rotate toward next waypoint
+                Vector3 lookDir = waypoints[currentWaypointIndex].position - transform.position;
+                lookDir.y = 0;
+
+                if (lookDir != Vector3.zero)
+                {
+                    transform.rotation = Quaternion.LookRotation(lookDir);
+                }
+            }
+
+            //Stop and trigger game
+            canMove = false;
+            gamePanel.SetActive(true);
         }
     }
 
