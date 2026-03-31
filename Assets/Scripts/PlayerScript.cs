@@ -14,6 +14,8 @@ public class PlayerScript : MonoBehaviour
     public Transform[] waypoints;
 
     public GameObject gamePanel;
+
+    public bool canMove = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,8 +44,11 @@ public class PlayerScript : MonoBehaviour
 
     public void MoveInput(InputAction.CallbackContext ctx)
     {
-        h = ctx.ReadValue<Vector2>().x;
-        v = ctx.ReadValue<Vector2>().y;
+        if (canMove == true)
+        {
+            h = ctx.ReadValue<Vector2>().x;
+            v = ctx.ReadValue<Vector2>().y;
+        }
     }
 
     public void MoveForward()
@@ -64,7 +69,10 @@ public class PlayerScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Customer"))
         {
+            canMove = false;
             gamePanel.SetActive(true);
+            //destroy customer
+            other.gameObject.SetActive(false);
         }
     }
 

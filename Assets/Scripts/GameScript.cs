@@ -25,10 +25,12 @@ public class GameScript : MonoBehaviour
 
     public int loseCount;
 
-    PlayerScript playerScript;
+    public PlayerScript playerScript;
 
     public void Start()
     {
+       // playerScript = GetComponent<PlayerScript>();
+
         isChosen = 0;
         EnemyChosen = 0;
 
@@ -195,8 +197,10 @@ public class GameScript : MonoBehaviour
         }
         else
         {
+            playerScript.gamePanel.SetActive(false);
             playerScript.canMove = true;
         }
+        Reset();
     }
 
     IEnumerator WinCondition()
@@ -205,6 +209,7 @@ public class GameScript : MonoBehaviour
         win.SetActive(true);
         playerScript.gamePanel.SetActive(false);
         playerScript.canMove = true;
+        Reset();
     }
 
     IEnumerator Reset()
